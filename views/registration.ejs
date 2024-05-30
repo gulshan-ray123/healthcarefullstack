@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/registration.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><header id="hdlogo"><ul class="logo"><li>www.patienttracker</li>
+        <li>Need Help</li></ul>
+    </header><hr><div id="progress"></div></div>
+    <section><div id="reg"><h3 id="regdoc">Registration Form</h3><br><strong id="inst">
+    Any missiformation during filling registration form causes strict action. </strong>
+ <ul><li id="detail1"><b>User Profile</b></li>
+ <li  id="detail2"><b>Residential Address</b></li>
+<li  id="detail3"><b>Alternative Detail</b></li>
+<li  id="detail4"><b>Upload Documents </b></li>
+</ul>
+</div><div id="border"><div id="form1"><h3 id="user">User Profile</h3><hr style="margin-top: 10px;">
+  <form action="/registerpt" method="post">
+<table border="0px" style="margin: 20px 0px 0px 20px;">
+        <tr>
+          <td id="fname">First Name</td>
+          <td id="mname">Middle Name</td>
+          <td id="lname">Last Name</td>
+        </tr>
+        <tr>
+            <td class="box"><input type="text" placeholder="Patient Full Name" id="first" name="fname" required></td>
+            <td class="box"><input type="text" placeholder="Patient Middle Name" id="middle" name="mname"></td>
+            <td class="box"><input type="text" placeholder="Patient Last Name" id="last" name="lname" required></td>
+          </tr>
+          <tr>
+            <td id="mobno">Mobile No.</td>
+            <td id="em1">Email Id</td>
+            <td id="dob">DOB</td>
+          </tr>
+          <tr>
+            <td class="box"><input type="tel" placeholder="+91" id="phone" name="mobno" required></td>
+            <td class="box"><input type="email" placeholder="useremail@gmail.com" id="email" name="em1" required></td>
+            <td class="box"><input type="date" name="dob"></td>
+          </tr>
+          <tr>
+            <td  id="inst1"><li>Invalid Patient First Name</li> </td></tr>
+            <tr><td  id="inst2"><li>Invalid Last name</li></td></tr>
+            <tr><td id="inst3"><li>Invalid Phone No.</li></td></tr>
+            <td id="inst4" ><li>Invalid Email</li></td>
+          </tr>
+          <button onclick="learn();" id="btn1">Verify</button>
+</table>
+<div id="form2"><h3 id="user">Residential Address/Alternative Detail</h3><hr style="margin-top: 10px;">
+  <table border="0px" style="margin: 20px 0px 0px 20px;">
+          <tr>
+            <td id="fname">Town/Village</td>
+            <td id="mname">Postoffice</td>
+            <td id="lname">Locality/Tehsil</td>
+          </tr>
+          <tr>
+              <td class="box"><input type="text" placeholder="Patient Town Name" id="first" name="town" required></td>
+              <td class="box"><input type="text" placeholder="Patient Postoffice" id="middle" name="postoffice"></td>
+              <td class="box"><input type="text" placeholder="Patient Locality" id="last" name="locality" required></td>
+            </tr>
+            <tr>
+              <td id="mobno">District</td>
+              <td id="em1">State</td>
+              <td id="dob">Pincode</td>
+            </tr>
+            <tr>
+              <td class="box"><input type="text" placeholder="District" id="phone" name="district" required></td>
+              <td class="box" id="state" name="state"><select>
+                <option>Delhi</option>
+                <option>Uttarpradesh</option>
+                <option>Bihar</option>
+                <option>MadhyaPradesh</option>
+                <option>Tamil Nadu</option>
+                <option>Chennai</option>
+                <option>Odisha</option>
+                <option>Kerala</option>
+                <option>Maharastra</option>
+                <option>Rajasthan</option>
+                <option>West Bengal</option>
+                <option>Uttarakhand</option>
+                <option>Gujarat</option>
+                <option>Assam</option>
+                <option>Meghalay</option>
+                <option>Assam</option>
+              </select></td>
+              <td class="box"><input type="number" id="pincode" name="pincode"></td>
+            </tr>
+            <tr>
+              <td id="fname">Nominee Name</td>
+              <td id="mname">Relation </td>
+              <td id="lname"> Phone No.</td>
+            </tr>
+            <tr>
+                <td class="box"><input type="text" placeholder="Patient Full Name" id="first" name="nominee" required></td>
+                <td class="box"><input type="text" placeholder="Patient Middle Name" id="middle" name="relation"></td>
+                <td class="box"><input type="text" placeholder="" id="last" name="phoneno" required></td>
+              </tr>
+              <button onclick="learn();" id="btn1" type="submit">Submit</button>
+  </table>
+</form>
+  <div id="form3"><h3 id="user">Upload Document</h3><hr style="margin-top: 10px;">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <table border="0px" style="margin: 20px 0px 0px 20px;">
+              <tr>
+                <td id="mobno">Upload Photo</td>
+                <td id="em1">Reports suggested by other <br>Doctors</td>
+                <td id="dob">Your Signature</td>
+              </tr>
+              <tr>
+                <td class="box"><input type="file" placeholder="+91" id="phone" name="uploadphoto"></td>
+                <td class="box"><input type="file" placeholder="" id="email" name="reports"></td>
+                <td class="box"><input type="file" name="yoursign"></td>
+              </tr>
+              <button type="submit">Upload</button>
+    </table></form> </div>
+</div>
+</div></div></section>
+<script src="/javascripts/registration.js"></script>
+</body>
+
+</html>

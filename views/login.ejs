@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            li{
+                color:aliceblue;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+        <title>
+            login form
+        </title>
+        <body>
+         <section id="sec1">
+            <form action="/register" method="post">
+            <div id="login">
+            <h3 id="sign_up">Sign up</h3>
+           <b class="bold">Full Name</b><br> <input type="text" id="user1" placeholder="input your name"required name="email"><br>
+           <b class="bold">Email</b> <br><input type="email" id="user2" placeholder="Enter your email" required name="username"><br>
+           <b class="bold">Password</b><br><input type="password" id="user3" placeholder="enter your password" required name="password">
+           <button id="btn" onclick="counter();" type="submit"><b style="color: azure;">Sign Up</b></button>
+           <h2 id="instr"><br>Instructions:</h4>
+           <ul><li id="name">Name must be greater than 3 Words</li>
+            <li id="mail">All letter of email shold be in lowercase including <q>@</q></li>
+            <li id="passlock">Create strong password i.e letter greater than 8 </li>
+        </ul>
+           </div>
+        </form>
+        <form action="/loginuser" method="post">
+            <div id="login1">
+                <h3 id="sign_in">Sign in</h3>
+                <b class="bold">Email</b> <br><input type="email" id="user4" placeholder="Enter your email" name="username"><br>
+                <b class="bold">Password</b><br><input type="password" id="user5" placeholder="enter your password" name="password">
+                <button id="btn" type="submit"><b style="color: azure;">Sign in</b></button>
+                <h2 id="instr"><br>Instructions:</h4>
+                    <ul><li>Name must be greater than 3 Words</li>
+                     <li>Enter proper email including <q>@</q></li>
+                     <li>Create strong password use atleast one character</li>
+               </div></form>
+               <div id="docimg"><img src="https://i.pinimg.com/originals/b8/23/e3/b823e38cc01fdb9278b6f7faa2feda6d.gif" id="doc_img"></div>
+         </section>
+        </body>
+        <link rel="stylesheet" href="/stylesheets/login.css">
+        <script src="/javascripts/login.js"></script>
+    </head>
+</html>
